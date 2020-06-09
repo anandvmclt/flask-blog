@@ -11,13 +11,13 @@
     "blog_title": "iVASS",
     "blog_tagline": "Awesome Blog created by iVASS Startup Village",
      "gmail_id" : "vassgpssystems@gmail.com",
-     "gmail_psd" : "admin@gpsbus",
+     "gmail_psd" : "vassgps",
      "blog_usr" : "anandnambissan2@gmail.com",
      "about_text": " Anad is an Engineer from Calicut, Kerala (IN). He is too much passioantae about new Technologies. Also intersted in work with innovative ideas in the firled of Electronics & IT. He owned copyright of some embedded & IoT projects.\n He is having Good experiance in Web development,IoT, Automation system designe & Robotics projects.",
      "post_num" : 3,
      "login_img" : "bootstrap-solid.svg",
      "admin_user" : "admin",
-     "admin_pswd" : "anjana007",
+     "admin_pswd" : "admin",
      "upload_location" : "C:\\Users\\Anand\\PycharmProjects\\flask\\Uploads"
   }
 
