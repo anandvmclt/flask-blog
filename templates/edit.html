@@ -1,0 +1,78 @@
+
+{% extends "layout.html" %}
+{% block body %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{url_for('static', filename='img/home-bg.jpg') }}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h3> Welcome to iVASS Administration</h3>
+            <span class="subheading">{{params['admin_user']}} , You can manage your Blog here</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+          <h4>Welcome, you are logged in as {{params['admin_user']}} </h4>
+
+
+        <!-- To do : fetch from database by looping -->
+        <!-- Pager -->
+
+          <div class="edit">
+              <h2> Add / Edit Posts</h2>
+        <form name="sentMessage" id="contactForm" novalidate action="/edit/{{post.sno}}" method="post">
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Title</label>
+              <input type="text" class="form-control" placeholder="Title" name="title" id="title" required data-validation-required-message="Please Enter Title" value="{{post.title}}">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Tag Line</label>
+              <input type="text" class="form-control" placeholder="Tag Line" name="tagline" id="tagline" required data-validation-required-message="Enter TagLine" value="{{post.tag_line}}">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>URL Slug</label>
+              <input type="text" class="form-control" placeholder="URL Slug" name="slug" id="slug" required data-validation-required-message="Enter URL - Slug" value="{{post.slug}}">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Content</label>
+              <textarea rows="5" class="form-control" placeholder="Content" name="content" id="content" required data-validation-required-message="Write the Post content">{{post.content}}s</textarea>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+           <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Image File</label>
+              <input class="form-control" placeholder="Choose Image File" name="img_file" id="img_file" value="{{post.img_file}}"></input>
+              <p class="help-block text-danger"></p>
+            </div>
+           </div>
+          <br>
+          <div id="success"></div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+          </div>
+        </form>
+          </div>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}

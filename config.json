@@ -1,0 +1,25 @@
+{
+  "params":
+  {
+    "local_server": "True",
+    "local_uri": "mysql+pymysql://anand:anjana007@localhost/anand",
+    "prod_uri": "mysql+pymysql://anand:anjana007@localhost/anand",
+    "fb_url": "https://facebook.com/anandvm",
+    "tw_url": "https://twitter.com/anandvm",
+    "gh_url": "https://github.com/anandvm",
+    "blog_name": "Startup village",
+    "blog_title": "iVASS",
+    "blog_tagline": "Awesome Blog created by iVASS Startup Village",
+     "gmail_id" : "vassgpssystems@gmail.com",
+     "gmail_psd" : "admin@gpsbus",
+     "blog_usr" : "anandnambissan2@gmail.com",
+     "about_text": " Anad is an Engineer from Calicut, Kerala (IN). He is too much passioantae about new Technologies. Also intersted in work with innovative ideas in the firled of Electronics & IT. He owned copyright of some embedded & IoT projects.\n He is having Good experiance in Web development,IoT, Automation system designe & Robotics projects.",
+     "post_num" : 3,
+     "login_img" : "bootstrap-solid.svg",
+     "admin_user" : "admin",
+     "admin_pswd" : "anjana007",
+     "upload_location" : "C:\\Users\\Anand\\PycharmProjects\\flask\\Uploads"
+  }
+
+
+}
