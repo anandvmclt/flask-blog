@@ -1,0 +1,71 @@
+
+{% extends "layout.html" %}
+{% block body %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{url_for('static', filename='img/home-bg.jpg') }}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h3> Welcome to iVASS Administration</h3>
+            <span class="subheading">{{params['admin_user']}} , You can manage your Blog here</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+          <h4>Welcome, you are logged in as {{params['admin_user']}} </h4>
+          <br>
+          <h3> Basic Actions</h3>
+          <a href="/edit/0"><button class="btn btn-primary"> Add new Post</button></a>
+          <a href="/logout"><button class="btn btn-primary"> Logout</button></a>
+          <hr>
+          <h4> Upload a file</h4>
+
+
+        <!-- To do : fetch from database by looping -->
+        <!-- Pager -->
+
+          <div class="table">
+              <h2> View or edit Messages</h2>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>SL NO</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Message</th>
+                    <th>Date</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  {% for cont in contact %}
+                  <tr>
+                    <td>{{cont.id}}</td>
+                    <td>{{cont.name}}</td>
+                    <td>{{cont.email_id}}</td>
+                    <td>{{cont.phone_num}}</td>
+                    <td>{{cont.msg}}</td>
+                    <td>{{cont.date}}</td>
+                    <th><a href="/delmsg/{{cont.id}}"><button class="btn btn-primary">  Delete </button></a></th>
+                  </tr>
+                  {% endfor %}
+
+                </tbody>
+              </table>
+          </div>
+
+
+      </div>
+    </div>
+  </div>
+{% endblock %}
